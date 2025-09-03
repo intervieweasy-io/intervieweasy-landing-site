@@ -4,6 +4,7 @@ import type { NextConfig } from "next";
 const withVanillaExtract = createVanillaExtractPlugin();
 
 const nextConfig: NextConfig = {
+   output: "export",
   reactStrictMode: true,
 };
 
