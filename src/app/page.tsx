@@ -1,49 +1,50 @@
 // src/app/page.tsx
-import * as s from './styles/landing.css';
+import * as s from './landing.styles';
+import React from 'react';
 
 const FeatureCard = ({ icon, title, text }: { icon: string; title: string; text: string }) => (
-  <div className={s.card}>
-    <div className={s.cardIcon}>{icon}</div>
-    <div className={s.cardTitle}>{title}</div>
-    <div className={s.cardText}>{text}</div>
-  </div>
+  <s.Card>
+    <s.CardIcon>{icon}</s.CardIcon>
+    <s.CardTitle>{title}</s.CardTitle>
+    <s.CardText>{text}</s.CardText>
+  </s.Card>
 );
 
 const Page = () => {
   return (
-    <div className={s.pageWrap}>
+    <s.PageWrap>
       {/* Top nav */}
-      <header className={s.nav}>
-        <div className={s.brand}>
-          <span className={s.brandIcon}>✨</span>
+      <s.Nav>
+        <s.Brand>
+          <s.BrandIcon>✨</s.BrandIcon>
           Karyo
-        </div>
+        </s.Brand>
         <div>Sign In</div>
-      </header>
+      </s.Nav>
 
       {/* Hero */}
-      <main className={s.main}>
-        <section className={s.container}>
-          <div className={s.heroBadge}>✨</div>
+      <s.Main>
+        <s.Container>
+          <s.HeroBadge>✨</s.HeroBadge>
 
-          <h1 className={s.title}>
-            Track it. <span className={s.crackGradient}>Crack it.</span>
-          </h1>
+          <s.Title>
+            Track it. <s.CrackGradient>Crack it.</s.CrackGradient>
+          </s.Title>
 
-          <p className={s.subtitle}>
+          <s.Subtitle>
             The modern job tracker that helps you land your dream role through smart tracking
             and powerful referral swaps.
-          </p>
+          </s.Subtitle>
 
-          <div className={s.ctas}>
-            <button className={s.primaryBtn}>
+          <s.Ctas>
+            <s.PrimaryBtn>
               Start Tracking Free <span style={{ marginLeft: 8 }}>✅</span>
-            </button>
-            <button className={s.secondaryBtn}>▶️ Watch Demo</button>
-          </div>
+            </s.PrimaryBtn>
+            <s.SecondaryBtn>▶️ Watch Demo</s.SecondaryBtn>
+          </s.Ctas>
 
           {/* Feature cards */}
-          <div className={s.features}>
+          <s.Features>
             <FeatureCard
               icon="✅"
               title="Smart Tracking"
@@ -59,15 +60,13 @@ const Page = () => {
               title="Growth Tracker"
               text="Track progress with analytics and get insights to improve your success rate."
             />
-          </div>
-        </section>
-      </main>
+          </s.Features>
+        </s.Container>
+      </s.Main>
 
       {/* Footer */}
-      <footer className={s.footer}>
-        Built with 💜 for job seekers everywhere
-      </footer>
-    </div>
+      <s.Footer>Built with 💜 for job seekers everywhere</s.Footer>
+    </s.PageWrap>
   );
 };
 

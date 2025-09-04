@@ -1,7 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
-import './globals.css';
-import { theme } from './styles/theme.css';
+import { ThemeProvider } from './context/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'Karyo – Track it. Crack it.',
@@ -10,8 +9,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={theme}>
-      <body>{children}</body>
+    <html lang="en">
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
