@@ -1,7 +1,7 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
 import './globals.css';
-import { theme } from './styles/theme.css.ts';
+import { theme } from './styles/theme.css';
 
 export const metadata: Metadata = {
   title: 'Karyo – Track it. Crack it.',
