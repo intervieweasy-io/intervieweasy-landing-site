@@ -65,13 +65,6 @@ export const theme = createTheme(vars, {
   }
 });
 
-// Global base styles
-globalStyle('html, body', {
-  backgroundColor: vars.color.bg,
-  color: vars.color.text,
-  fontFamily: vars.font.body,
-});
-
 globalStyle('::selection', {
   background: 'rgba(184,108,255,0.25)'
 });
@@ -174,4 +167,12 @@ globalStyle(`.${lightTheme}, .${darkTheme}`, {
 /* Selection color */
 globalStyle("::selection", {
   background: "rgba(184,108,255,0.25)",
+});
+
+
+// Global base styles
+globalStyle(`.${lightTheme}, .${darkTheme}`, {
+  backgroundColor: vars.color.bg,
+  color: vars.color.text,
+  fontFamily: vars.font.body,
 });
