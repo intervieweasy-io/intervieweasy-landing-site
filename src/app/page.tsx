@@ -1,5 +1,5 @@
 // src/app/page.tsx
-import * as s from './styles/landing.css';
+import * as s from './styles/landing.css.ts';
 
 const FeatureCard = ({ icon, title, text }: { icon: string; title: string; text: string }) => (
   <div className={s.card}>
