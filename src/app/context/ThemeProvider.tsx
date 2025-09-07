@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useState, useMemo, ReactNode } from "react";
-import { lightTheme, darkTheme } from "../styles/theme.css";
 
 type Theme = "light" | "dark";
 
@@ -27,7 +26,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <ThemeContext.Provider value={value}>
-      <div className={theme === "light" ? lightTheme : darkTheme}>
+      <div className={theme === "light" ? '': ''}>
         {children}
       </div>
     </ThemeContext.Provider>

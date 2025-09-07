@@ -1,49 +1,46 @@
-// src/app/page.tsx
-import * as s from './styles/landing.css';
-
 const FeatureCard = ({ icon, title, text }: { icon: string; title: string; text: string }) => (
-  <div className={s.card}>
-    <div className={s.cardIcon}>{icon}</div>
-    <div className={s.cardTitle}>{title}</div>
-    <div className={s.cardText}>{text}</div>
+  <div>
+    <div>{icon}</div>
+    <div>{title}</div>
+    <div>{text}</div>
   </div>
 );
 
 const Page = () => {
   return (
-    <div className={s.pageWrap}>
+    <div>
       {/* Top nav */}
-      <header className={s.nav}>
-        <div className={s.brand}>
-          <span className={s.brandIcon}>✨</span>
+      <header>
+        <div>
+          <span>✨</span>
           Karyo
         </div>
         <div>Sign In</div>
       </header>
 
       {/* Hero */}
-      <main className={s.main}>
-        <section className={s.container}>
-          <div className={s.heroBadge}>✨</div>
+      <main>
+        <section>
+          <div>✨</div>
 
-          <h1 className={s.title}>
-            Track it. <span className={s.crackGradient}>Crack it.</span>
+          <h1>
+            Track it. <span>Crack it.</span>
           </h1>
 
-          <p className={s.subtitle}>
+          <p>
             The modern job tracker that helps you land your dream role through smart tracking
             and powerful referral swaps.
           </p>
 
-          <div className={s.ctas}>
-            <button className={s.primaryBtn}>
+          <div>
+            <button>
               Start Tracking Free <span style={{ marginLeft: 8 }}>✅</span>
             </button>
-            <button className={s.secondaryBtn}>▶️ Watch Demo</button>
+            <button>▶️ Watch Demo</button>
           </div>
 
           {/* Feature cards */}
-          <div className={s.features}>
+          <div>
             <FeatureCard
               icon="✅"
               title="Smart Tracking"
@@ -64,7 +61,7 @@ const Page = () => {
       </main>
 
       {/* Footer */}
-      <footer className={s.footer}>
+      <footer>
         Built with 💜 for job seekers everywhere
       </footer>
     </div>
