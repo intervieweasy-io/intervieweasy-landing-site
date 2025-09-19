@@ -28,7 +28,7 @@ const Page = () => {
           <span className="text-purple-400"><Zap /></span>
           Karyo
         </div>
-        <a href="#" className="text-sm text-gray-400 hover:text-gray-200">
+        <a href="https://karyo.intervieweasy.io/login" className="text-sm text-gray-400 hover:text-gray-200">
           Sign In
         </a>
       </header>
