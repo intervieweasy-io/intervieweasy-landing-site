@@ -1,12 +1,14 @@
-export default async function sitemap() {
-  const base = "https://intervieweasy.io";
+import type { MetadataRoute } from 'next';
 
-  const routes = ["", "/features", "/pricing", "/privacy"].map((p) => ({
-    url: `${base}${p}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: "weekly",
-    priority: p === "" ? 1.0 : 0.7,
-  }));
+export const dynamic = 'force-static'; 
 
-  return routes;
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = 'https://karyo.app';
+
+  return [
+    { url: `${base}/`, lastModified: new Date('2025-09-01'), changeFrequency: 'weekly', priority: 1 },
+    { url: `${base}/features`, lastModified: new Date('2025-09-01'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/pricing`, lastModified: new Date('2025-09-01'), changeFrequency: 'monthly', priority: 0.7 },
+  
+  ];
 }

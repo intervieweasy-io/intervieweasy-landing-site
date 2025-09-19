@@ -1,7 +1,16 @@
-export default function robots() {
+import type { MetadataRoute } from 'next';
+
+export const dynamic = 'force-static'; 
+
+export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: "https://karyo.app/sitemap.xml",
-    host: "https://karyo.app",
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+    sitemap: 'https://karyo.app/sitemap.xml',
+    host: 'https://karyo.app',
   };
 }
